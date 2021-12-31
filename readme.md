@@ -29,12 +29,14 @@ docker pull lacledeslan/gamesvr-ut99;
 
 The image includes a test script that can be used to verify its contents. No changes or pull-requests will be accepted to this repository if any tests fail.
 
+```shell
 docker run -it --rm lacledeslan/gamesvr-ut99:latest /app/ll-tests/gamesvr-ut99.sh;
+```
 
 ### Run simple interactive server
 
 ```shell
-docker run -it --rm --net=host /app/ucc server DM-Deck16][.unr?Game=Botpack.DeathMatchPlus -nohomedir -lanplay;
+docker run -it --rm --net=host lacledeslan/gamesvr-ut99 /app/ucc server DM-Deck16][.unr?Game=Botpack.DeathMatchPlus -nohomedir -lanplay;
 ```
 
 ## Getting Started with Game Servers in Docker
