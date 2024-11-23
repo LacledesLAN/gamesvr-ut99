@@ -41,7 +41,7 @@ docker run -it --rm lacledeslan/gamesvr-ut99:latest /app/ll-tests/gamesvr-ut99.s
 docker run -it --rm --net=host lacledeslan/gamesvr-ut99 /app/ucc server DM-Deck16][.unr?Game=Botpack.DeathMatchPlus -nohomedir -lanplay;
 ```
 
-## Custom configuration and Online server.
+## Custom configuration and Online Server Hosting.
 
 Due to the shutdown of Gamespy in 2014 and the shutdown of the official master server by Epic in December 2022, a custom server config has been prepared. This [custom server config](https://github.com/LacledesLAN/gamesvr-ut99/blob/master/dist.linux/System/UnrealTournament-Online.ini) includes community servers to allow for listing on updated and community clients. Included is listings and settings provided by [OldUnreal](https://www.oldunreal.com/wiki/index.php?title=Masterserver_Guide) and [333networks](https://333networks.com/instructions/ut/s). Also this server file can be used as a base for a custom config while preserving the [original default](https://github.com/LacledesLAN/gamesvr-ut99/blob/master/dist.linux/System/UnrealTournament.ini) config as a fall back.
 
