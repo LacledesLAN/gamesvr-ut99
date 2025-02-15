@@ -9,7 +9,7 @@ RUN echo "Downloading UT99 Dedicated Server Assets" &&`
         mkdir --parents /tmp/ &&`
 		curl -sSL "http://${contentServer}/fastDownloads/_installers/uts99/ut99-oldunreal-469e-rc7-linux-amd64.7z" -o /tmp/ut99-server.7z &&`
     echo "Validating download against known hash" &&`
-        echo "1f72326595e34474a955dfce7201c58ff16b772cb79ac118d3914d029b5e593e /tmp/ut99-server.7z" | sha256sum -c - &&`
+        echo "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0 /tmp/ut99-server.7z" | sha256sum -c - &&`
 	echo "Extracting UT99 Dedicated Server Assets" &&`
 		7z x -o/output/ /tmp/ut99-server.7z &&`
 		rm -f /tmp/*.7z
