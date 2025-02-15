@@ -7,7 +7,7 @@ ARG contentServer=content.lacledeslan.net
 
 RUN echo "Downloading UT99 Dedicated Server Assets" &&`
         mkdir --parents /tmp/ &&`
-		curl -sSL "http://${contentServer}/fastDownloads/_installers/ut99-451-linux.7z" -o /tmp/ut99-server.7z &&`
+		curl -sSL "http://${contentServer}/fastDownloads/_installers/uts99/ut99-oldunreal-469e-rc7-linux-amd64.7z" -o /tmp/ut99-server.7z &&`
     echo "Validating download against known hash" &&`
         echo "1f72326595e34474a955dfce7201c58ff16b772cb79ac118d3914d029b5e593e /tmp/ut99-server.7z" | sha256sum -c - &&`
 	echo "Extracting UT99 Dedicated Server Assets" &&`
@@ -15,7 +15,7 @@ RUN echo "Downloading UT99 Dedicated Server Assets" &&`
 		rm -f /tmp/*.7z
 
 #=======================================================================
-FROM debian:bullseye-slim
+FROM debian:bookworm-slim
 
 HEALTHCHECK NONE
 
@@ -40,7 +40,7 @@ LABEL com.lacledeslan.build-node=$BUILDNODE `
         org.opencontainers.image.vendor="Laclede's LAN" `
         org.opencontainers.image.version=$SOURCE_COMMIT
 
-# Set up Enviornment
+# Set up Environment
 RUN useradd --home /app --gid root --system UT99 &&`
     mkdir -p /app &&`
     chown UT99:root -R /app;

@@ -13,12 +13,11 @@ This UT99 server was built from the following content:
 3. DE Bonus Pack (a.k.a. Bonus Pack 2): Contains three new mutators (Team Beacon, Volatile Ammo and Volatile Weapon) and two new maps: CTF-HallOfGiants and CTF-Orbital.
 4. Inoxx Bonus Pack (a.k.a. Bonus Pack 3): Contains six new maps: CTF-Face][, CTF-High, CTF-Kosov, CTF-Nucleus, DM-Crane and DM-SpaceNoxx.
 5. Christmas Bonus Pack (a.k.a. Bonus Pack 4): Includes two new models (Warboss and Xan Mk. II) and 12 new maps: CTF-Beatitude, CTF-EpicBoy, CTF-Face-SE, CTF-Ratchet, DM-Bishop, DM-Closer, DM-Grit-TOURNEY, DM-Viridian-TOURNEY, DOM-Bullet, DOM-CiDom, DOM-Lament][ and DOM-WolfsBay.
-6. UTPG community patch - version 451.
+6. [OldUnreal Community Patch - version 469e-rc7](https://github.com/OldUnreal/UnrealTournamentPatches)
 
 ## Linux
 
 [![linux/amd64](https://github.com/LacledesLAN/gamesvr-ut99/actions/workflows/build-linux-image.yml/badge.svg?branch=master)](https://github.com/LacledesLAN/gamesvr-ut99/actions/workflows/build-linux-image.yml)
-
 
 
 ### Download
