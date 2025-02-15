@@ -19,7 +19,7 @@ RUN echo "Downloading UT99 Dedicated Server Assets" &&`
     fi &&`
         echo "Extracting UT99 Dedicated Server Assets" &&`
         7z x -o/output/ /tmp/ut99-server.7z &&`
-    rm -f;
+    rm -f /tmp/*.7z
 
 
 RUN echo "Downloading UT99 Dedicated Server Assets" &&`
