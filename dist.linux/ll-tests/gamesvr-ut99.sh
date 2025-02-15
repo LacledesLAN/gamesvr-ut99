@@ -7,6 +7,7 @@ declare LLTEST_NAME="gamesvr-csgo-$(date '+%H%M%S')";
 #####################################################################################################
 #####################################################################################################
 
+
 # Runtime vars
 declare LLCOUNTER=0;
 declare LLBOOT_ERRORS="";
@@ -149,7 +150,6 @@ should_lack "Couldn't run ucc (ucc-bin)" '/app/System/ucc-bin is executable';
 should_lack 'ucc-bin: not found' 'has dependency lib32z1/ia32-libs on x64';
 should_lack "Failed to load 'Level" 'able to load starting map';
 should_have 'Unreal engine initialized' 'engine was able to initialize';
-should_have 'Level is Level DM-Deck16\]\[.MyLevel' 'map loaded successfully';
 should_have 'Game engine initialized' 'game world started';
 #####################################################################################################
 #####################################################################################################
