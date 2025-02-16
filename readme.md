@@ -1,6 +1,8 @@
-# Unreal Tournament (1999) Dedicated Server in Docker
+# Unreal Tournament (aka `UT99`) Dedicated Server in Docker
 
-Unreal Tournament is an arena first-person shooter first published in 1999, with head-to-head multiplayer deathmatches being the primary focus of the game. "Mutators" are available which drastically alter gameplay aspects, such as "InstaGib", the use of which makes players compete with instant-kill weapons instead of the normal ones.
+Unreal Tournament is an arena first-person shooter first published in 1999, retrospectively the game is known as `UT99` to differentiate it from its sequels. UT is an arena first-person shooter, with head-to-head multiplayer deathmatches being the primary focus of the game. "Mutators" are available which drastically alter gameplay aspects, such as "InstaGib", the use of which makes players compete with instant-kill weapons instead of the normal ones.
+
+In 2019, community group [OldUnreal](https://www.oldunreal.com/) got the approval from creator [Epic Games](https://www.epicgames.com) to developer new community patches.
 
 ![Unreal Tournament (1999)](.misc/ut99.jpg)
 
