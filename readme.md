@@ -51,6 +51,32 @@ Due to the shutdown of Gamespy in 2014 and the shutdown of the official master s
 docker run -it --rm --net=host lacledeslan/gamesvr-ut99 /app/ucc server dm-Turbine?game=Botpack.DeathMatchPlus ini=UnrealTournament-Online.ini log=logfile.log -nohomedir
 ```
 
+### Run interactive server with custom config and web interface
+
+Unreal Tournament 99 includes a admin web interface to make it easy to change maps, game options, playlists, ban players, etc. By default this option is not enabled and can be turned on with adding "-adminconsole" and "-http" to the command line and enable via the [config file](https://github.com/LacledesLAN/gamesvr-ut99/blob/master/dist.linux/System/UnrealTournament.ini).  
+
+On the command line it will look like this. 
+```shell
+docker run -it --rm --net=host lacledeslan/gamesvr-ut99 /app/ucc server dm-Turbine?game=Botpack.DeathMatchPlus ini=UnrealTournament-Online.ini log=logfile.log -nohomedir -adminconsole -http
+```
+In the UnrealTournament.ini file just set bEnabled to true, remember the port number, userid, and password. You will be able to login to the server with a web browser. Just go to http://ipaddress:port on your browser.
+```shell
+[UTServerAdmin.UTServerAdmin]
+AdminUsername=username
+AdminPassword=password
+
+
+[UWeb.WebServer]
+Applications[0]=UTServerAdmin.UTServerAdmin
+ApplicationPaths[0]=/ServerAdmin
+Applications[1]=UTServerAdmin.UTImageServer
+ApplicationPaths[1]=/images
+DefaultApplication=0
+bEnabled=True
+ListenPort=5080
+
+```
+
 ## Getting Started with Game Servers in Docker
 
 [Docker](https://docs.docker.com/) is an open-source project that bundles applications into lightweight, portable, self-sufficient containers. For a crash course on running Dockerized game servers check out [Using Docker for Game Servers](https://github.com/LacledesLAN/README.1ST/blob/master/GameServers/DockerAndGameServers.md). For tips, tricks, and recommended tools for working with Laclede's LAN Dockerized game server repos see the guide for [Working with our Game Server Repos](https://github.com/LacledesLAN/README.1ST/blob/master/GameServers/WorkingWithOurRepos.md). You can also browse all of our other Dockerized game servers: [Laclede's LAN Game Servers Directory](https://github.com/LacledesLAN/README.1ST/tree/master/GameServers).
