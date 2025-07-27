@@ -1,6 +1,6 @@
-\# Server Administration Console Commands
+# Server Administration Console Commands
 
-\## General Commands
+## General Commands
 
 | Action                                  | Type this in the Console                        |
 |----------------------------------------|-------------------------------------------------|
@@ -12,8 +12,7 @@
 
 
 
-\##  Change Maps and Gametypes
-
+##  Change Maps and Gametypes
 
 
 | Action                                         | Type this in the Console                                         |
@@ -28,7 +27,7 @@
 
 
 
-\##  Mutators
+##  Mutators
 
 
 
@@ -45,7 +44,7 @@
 
 
 
-\##  Limits
+##  Limits
 
 
 
@@ -66,7 +65,7 @@
 
 
 
-\##  Tournament Mode
+##  Tournament Mode
 
 | Setting                             | Command                                                   |
 |-------------------------------------|------------------------------------------------------------|
@@ -77,7 +76,7 @@
 
 
 
-\##  Server Physics
+##  Server Physics
 
 | Setting                                  | Command                                                       |
 |------------------------------------------|----------------------------------------------------------------|
