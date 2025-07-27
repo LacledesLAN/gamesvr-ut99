@@ -1,3 +1,7 @@
+### Project Specific ###
+sources/** */
+
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
