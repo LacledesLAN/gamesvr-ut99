@@ -6,7 +6,7 @@ set -e
 # The `./sources/` directory should contain:
 #
 # * `ut99server436_goty_bp4_linuxfix.tar.zst`
-#    This archive should be optimized for linux and contain:
+#    This archive should be optimized for linux and contain the combined contents of:
 #    - ut-server-linux-436.tar.gz
 #    - bonus-pack1.zip
 #    - bonus-pack2_(de_pack).zip
