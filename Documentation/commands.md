@@ -33,7 +33,6 @@
 
 
 | Action                                                   | Type this in the Console                                                                 |
-
 |----------------------------------------------------------|--------------------------------------------------------------------------------------------|
 | Restart map with a mutator                               | `admin servertravel?restart?game=botpack.ctfgame?mutator=mutator`                        |
 | Start Face without redeemer                              | `admin servertravel ctf-face?game=botpack.ctfgame?mutator=botpack.noredeemer`            |
@@ -51,7 +50,6 @@
 
 
 | Setting                              | Command                                               |
-
 |--------------------------------------|--------------------------------------------------------|
 | See current timelimit                | `admin get botpack.ctfgame timelimit`                |
 | Set timelimit to 20 minutes          | `admin set botpack.ctfgame timelimit 20`             |
