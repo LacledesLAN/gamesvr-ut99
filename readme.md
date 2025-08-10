@@ -51,6 +51,17 @@ Due to the shutdown of Gamespy in 2014 and the shutdown of the official master s
 docker run -it --rm --net=host lacledeslan/gamesvr-ut99 /app/ucc server dm-Turbine?game=Botpack.DeathMatchPlus ini=UnrealTournament-Online.ini log=logfile.log -nohomedir
 ```
 
+### Run with specific mutator enabled
+
+Unreal Tournament 99 includes mutators to alter the game play and functionality of the server. However they are not enabled by default. You can simply add "?mutator=mutatorname" to the command string. In this example a mapvoting plugin (?mutator=MapVoteLAv2.BDBMapVote) was added and enabled. Mutators must be nabled and added to the server config file being used.
+
+On the command line it will look like this.
+
+```shell
+docker run -it --rm --net=host lacledeslan/gamesvr-ut99 /app/ucc server dm-Turbine?game=Botpack.DeathMatchPlus?mutator=MapVoteLAv2.BDBMapVote ini=UnrealTournament-Online.ini log=logfile.log -nohomedir -adminconsole -http
+```
+
+
 ### Run interactive server with custom config and web interface
 
 Unreal Tournament 99 includes a admin web interface to make it easy to change maps, game options, playlists, ban players, etc. By default this option is not enabled and can be turned on with adding "-adminconsole" and "-http" to the command line and enable via the [config file](https://github.com/LacledesLAN/gamesvr-ut99/blob/master/dist.linux/System/UnrealTournament.ini).
@@ -61,7 +72,7 @@ On the command line it will look like this.
 docker run -it --rm --net=host lacledeslan/gamesvr-ut99 /app/ucc server dm-Turbine?game=Botpack.DeathMatchPlus ini=UnrealTournament-Online.ini log=logfile.log -nohomedir -adminconsole -http
 ```
 
-In the UnrealTournament.ini file just set bEnabled to true, remember the port number, userid, and password. You will be able to login to the server with a web browser. Just go to http://ipaddress:port on your browser.
+In the UnrealTournament.ini file just set bEnabled to true, remember the port number, userid, and password. You will be able to login to the server with a web browser. Just go to http://ipaddress:port on your browser. Currently putting in the AdminPassword field into the launchstring does not work. 
 
 ```shell
 [UTServerAdmin.UTServerAdmin]
@@ -79,6 +90,18 @@ bEnabled=True
 ListenPort=5080
 
 ```
+
+### Other Varibles that can be entered into the launch string.
+
+| Varible | Puropse |
+|-------|-----|
+| ?game=Yourgametype.Classname | Selects game type |
+| ?difficulty=1-7 | Bot Diffucluty |
+| -lanplay | Optimizes for Local Network play |
+| -log=logfile.log | creates a log file|
+| multihome=127.0.0.1 | Binds the server to a specific IP on a multi-homed system—handy if your system has multiple interfaces or IPs.|
+| ?maxplayers=16 | Defines max number of players allowed on the server. |
+
 
 ## Getting Started with Game Servers in Docker
 
