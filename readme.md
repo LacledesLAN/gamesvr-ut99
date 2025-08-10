@@ -95,12 +95,12 @@ ListenPort=5080
 
 | Varible | Puropse |
 |-------|-----|
-| ?game=Yourgametype.Classname | Selects game type |
-| ?difficulty=1-7 | Bot Diffucluty |
-| -lanplay | Optimizes for Local Network play |
-| -log=logfile.log | creates a log file|
+| game=Yourgametype.Classname | Selects game type |
+| difficulty=1-7 | Bot Diffucluty |
+| lanplay | Optimizes for Local Network play |
+| log=logfile.log | creates a log file|
 | multihome=127.0.0.1 | Binds the server to a specific IP on a multi-homed system—handy if your system has multiple interfaces or IPs.|
-| ?maxplayers=16 | Defines max number of players allowed on the server. |
+| maxplayers=16 | Defines max number of players allowed on the server. |
 
 
 ## Getting Started with Game Servers in Docker
