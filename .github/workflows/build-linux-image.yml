@@ -1,4 +1,4 @@
-name: linux/amd64
+name: linux/x86-64
 
 on:
   schedule:
@@ -26,7 +26,7 @@ jobs:
         uses: docker/build-push-action@v6.18.0
         with:
           context: .
-          file: ./linux.Dockerfile
+          file: ./linux.x86-64.Dockerfile
           tags: |
             lacledeslan/gamesvr-ut99:latest
             ghcr.io/lacledeslan/gamesvr-ut99:latest

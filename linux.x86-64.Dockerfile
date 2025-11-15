@@ -7,15 +7,15 @@ ARG contentServer=content.lacledeslan.net
 
 RUN echo "Downloading UT99 Dedicated Server Assets" &&`
         mkdir --parents /tmp/ &&`
-        curl -sSL "http://${contentServer}/fastDownloads/_installers/ut99/ut99-server-469e-linux.tar.xz" -o /tmp/ut99-server.tar.xz &&`
+        curl -sSL "http://${contentServer}/fastDownloads/_installers/ut99/ut99-server-x86-469e-linux.tar.xz" -o /tmp/ut99-server-x86.tar.xz &&`
     echo "Validating download against known hash" &&`
-        echo "c7a249b4b0b7513abc77f58f3588eb80e3f2ca21900b5637e16dd3d7d1c21106 /tmp/ut99-server.tar.xz" | sha256sum -c - &&`
+        echo "0abcc9c1e21db7d6273ec1e22fff6b24324ddabdb27360278216e6ea00b258aa /tmp/ut99-server-x86.tar.xz" | sha256sum -c - &&`
     echo "Extracting UT99 Dedicated Server Assets" &&`
-        tar -xJvf /tmp/ut99-server.tar.xz -C /output/ &&`
+        tar -xJvf /tmp/ut99-server-x86.tar.xz -C /output/ &&`
         rm -f /tmp/*.xz
 
 #=======================================================================
-FROM debian:bookworm-slim
+FROM debian:trixie-slim
 
 HEALTHCHECK NONE
 
