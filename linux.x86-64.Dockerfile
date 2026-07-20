@@ -13,11 +13,13 @@ RUN echo "Downloading UT99 Dedicated Server Assets" && \
         tar -xJvf /tmp/ut99-server-x86.tar.xz -C /output/ && \
         rm -f /tmp/*.xz
 
-#=======================================================================
+
+#---------------------------------
 FROM debian:trixie-slim
 
-ARG BUILD_NODE=unspecified
-ARG GIT_REVISION=unspecified
+ARG BUILD_DATE=unspecified \
+    BUILD_NODE=unspecified \
+    GIT_REVISION=unspecified
 
 HEALTHCHECK NONE
 
@@ -34,12 +36,13 @@ ENV LANG=en_US.UTF-8 \
     UT_DATA_PATH=/app/System
 
 LABEL architecture="amd64" \
-    com.lacledeslan.build-node=$BUILD_NODE \
-    maintainer="Laclede's LAN <contact@lacledeslan.com>" \
-    org.opencontainers.image.description="Unreal Tournament 99 Dedicated Server" \
-    org.opencontainers.image.revision=$GIT_REVISION \
-    org.opencontainers.image.source="https://github.com/LacledesLAN/gamesvr-ut99" \
-    org.opencontainers.image.vendor="Laclede's LAN"
+      com.lacledeslan.build-node=$BUILD_NODE \
+      maintainer="Laclede's LAN <contact@lacledeslan.com>" \
+      org.opencontainers.image.created="$BUILD_DATE" \
+      org.opencontainers.image.description="Unreal Tournament 99 Dedicated Server" \
+      org.opencontainers.image.revision=$GIT_REVISION \
+      org.opencontainers.image.source="https://github.com/LacledesLAN/gamesvr-ut99" \
+      org.opencontainers.image.vendor="Laclede's LAN"
 
 # Set up Environment
 RUN useradd --home /app --gid root --system UT99 && \
