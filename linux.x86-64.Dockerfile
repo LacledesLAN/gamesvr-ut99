@@ -2,11 +2,11 @@ ARG CONTAINER_REGISTRY="docker.io"
 
 FROM $CONTAINER_REGISTRY/lacledeslan/steamcmd:linux AS ut99-builder
 
-ARG contentServer=content.lacledeslan.net
+ARG CONTENT_SERVER=content.lacledeslan.net
 
 RUN echo "Downloading UT99 Dedicated Server Assets" && \
         mkdir --parents /tmp/ && \
-        curl -sSL "http://${contentServer}/fastDownloads/_installers/ut99/ut99-server-x86-469e-linux.tar.xz" -o /tmp/ut99-server-x86.tar.xz && \
+        curl -sSL "http://${CONTENT_SERVER}/fastDownloads/_installers/ut99/ut99-server-x86-469e-linux.tar.xz" -o /tmp/ut99-server-x86.tar.xz && \
     echo "Validating download against known hash" && \
         echo "0abcc9c1e21db7d6273ec1e22fff6b24324ddabdb27360278216e6ea00b258aa /tmp/ut99-server-x86.tar.xz" | sha256sum -c - && \
     echo "Extracting UT99 Dedicated Server Assets" && \
