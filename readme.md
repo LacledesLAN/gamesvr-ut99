@@ -19,7 +19,7 @@ This UT99 server was built from the following content:
 
 ## Linux
 
-[![linux/amd64](https://github.com/LacledesLAN/gamesvr-ut99/actions/workflows/build-linux-image.yml/badge.svg?branch=master)](https://github.com/LacledesLAN/gamesvr-ut99/actions/workflows/build-linux-image.yml)
+[![linux/amd64](https://github.com/LacledesLAN/gamesvr-ut99/actions/workflows/build-linux-image.yml/badge.svg?branch=main)](https://github.com/LacledesLAN/gamesvr-ut99/actions/workflows/build-linux-image.yml)
 
 ### Download
 
@@ -43,7 +43,7 @@ docker run -it --rm --net=host lacledeslan/gamesvr-ut99 /app/ucc server DM-Deck1
 
 ## Custom Configuration and Online Server Hosting
 
-Due to the shutdown of Gamespy in 2014 and the shutdown of the official master server by Epic in December 2022, a custom server config has been prepared. This [custom server config](https://github.com/LacledesLAN/gamesvr-ut99/blob/master/dist.linux/System/UnrealTournament-Online.ini) includes community servers to allow for listing on updated and community clients. Included is listings and settings provided by [OldUnreal](https://www.oldunreal.com/wiki/index.php?title=Masterserver_Guide) and [333networks](https://333networks.com/instructions/ut/s). Also this server file can be used as a base for a custom config while preserving the [original default](https://github.com/LacledesLAN/gamesvr-ut99/blob/master/dist.linux/System/UnrealTournament.ini) config as a fall back.
+Due to the shutdown of Gamespy in 2014 and the shutdown of the official main server by Epic in December 2022, a custom server config has been prepared. This [custom server config](https://github.com/LacledesLAN/gamesvr-ut99/blob/main/dist.linux/System/UnrealTournament-Online.ini) includes community servers to allow for listing on updated and community clients. Included is listings and settings provided by [OldUnreal](https://www.oldunreal.com/wiki/index.php?title=mainserver_Guide) and [333networks](https://333networks.com/instructions/ut/s). Also this server file can be used as a base for a custom config while preserving the [original default](https://github.com/LacledesLAN/gamesvr-ut99/blob/main/dist.linux/System/UnrealTournament.ini) config as a fall back.
 
 ### Run online server with custom config
 
@@ -63,7 +63,7 @@ docker run -it --rm --net=host lacledeslan/gamesvr-ut99 /app/ucc server dm-Turbi
 
 ### Run interactive server with custom config and web interface
 
-Unreal Tournament 99 includes a admin web interface to make it easy to change maps, game options, playlists, ban players, etc. By default this option is not enabled and can be turned on with adding "-adminconsole" and "-http" to the command line and enable via the [config file](https://github.com/LacledesLAN/gamesvr-ut99/blob/master/dist.linux/System/UnrealTournament.ini).
+Unreal Tournament 99 includes a admin web interface to make it easy to change maps, game options, playlists, ban players, etc. By default this option is not enabled and can be turned on with adding "-adminconsole" and "-http" to the command line and enable via the [config file](https://github.com/LacledesLAN/gamesvr-ut99/blob/main/dist.linux/System/UnrealTournament.ini).
 
 On the command line it will look like this.
 
@@ -103,4 +103,4 @@ ListenPort=5080
 
 ## Getting Started with Game Servers in Docker
 
-[Docker](https://docs.docker.com/) is an open-source project that bundles applications into lightweight, portable, self-sufficient containers. For a crash course on running Dockerized game servers check out [Using Docker for Game Servers](https://github.com/LacledesLAN/README.1ST/blob/master/GameServers/DockerAndGameServers.md). For tips, tricks, and recommended tools for working with Laclede's LAN Dockerized game server repos see the guide for [Working with our Game Server Repos](https://github.com/LacledesLAN/README.1ST/blob/master/GameServers/WorkingWithOurRepos.md). You can also browse all of our other Dockerized game servers: [Laclede's LAN Game Servers Directory](https://github.com/LacledesLAN/README.1ST/tree/master/GameServers).
+[Docker](https://docs.docker.com/) is an open-source project that bundles applications into lightweight, portable, self-sufficient containers. For a crash course on running Dockerized game servers check out [Using Docker for Game Servers](https://github.com/LacledesLAN/README.1ST/blob/main/GameServers/DockerAndGameServers.md). For tips, tricks, and recommended tools for working with Laclede's LAN Dockerized game server repos see the guide for [Working with our Game Server Repos](https://github.com/LacledesLAN/README.1ST/blob/main/GameServers/WorkingWithOurRepos.md). You can also browse all of our other Dockerized game servers: [Laclede's LAN Game Servers Directory](https://github.com/LacledesLAN/README.1ST/tree/main/GameServers).
